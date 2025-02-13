@@ -42,10 +42,10 @@ while True:
   disciplina = input('Digite a disciplina: ').upper()
   if disciplina == 'FIM': break
 
-  if disciplina in matricula:
+  if matricula in dictAlunos.keys():
     print('Disciplina já cadastrada. \nInforme outra disciplina.')
   nota = input('Digite a nota da disciplina: ')
-  dictAluno = {matricula[0]: {'Disciplina': nota[1]}
+  dictAluno = {matricula: {'Disciplina': nota}
                 for matricula in dictAlunos  }
 
 print(dictAluno)
